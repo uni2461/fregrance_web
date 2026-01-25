@@ -161,10 +161,10 @@ h2 {
   font-weight: bold;
 }
 @media (max-width: 768px) {
- h2 {font-size: 30px;       }
+ h2 {font-size: 25px;       }
 }
 @media (min-width: 769px) and (max-width: 1024px) {
- h2 {font-size: 40px;       }
+ h2 {font-size: 30px;       }
 }
 
 /* introセクション */
@@ -185,28 +185,6 @@ h2 {
     margin-top: 12px;
 }
 .int_chach {font-size: 28px; margin-top:12px; font-weight: bold;}
-
-@media (min-width: 769px) and (max-width: 1024px) {
-  .intro {padding: 30px 16px;}
-  .intro .int-container p.text-pc {display: none;text-align: center;}
-  .intro .int-container p.text-sp {
-    display: flex;
-    font-size: 15px;
-    line-height: 1.8;
-    text-align: center;
-    justify-content: center;
-    margin-top: 12px;
-  }
-  .intro .int-container p.text-ensp{
-    display: flex;
-    font-size: 16px;
-    line-height: 1.8;
-    text-align: center;
-    justify-content: center;
-    margin-top: 12px;
-  }
-  .int_chach {font-size: 18px; margin-top:12px;font-weight: bold;}
-}
 @media (max-width: 768px) {
   .intro {padding: 24px 12px;}
   .intro .int-container h2.int_title {font-weight: bold;line-height: 1.4;}
@@ -227,8 +205,30 @@ h2 {
     justify-content: center;
     margin-top: 12px;
   }
-  .int_chach {font-size: 18px; margin-top:12px;}
+  .int_chach {font-size: 15px; margin-top:12px;}
 }
+@media (min-width: 769px) and (max-width: 1024px) {
+  .intro {padding: 30px 16px;}
+  .intro .int-container p.text-pc {display: none;text-align: center;}
+  .intro .int-container p.text-sp {
+    display: flex;
+    font-size: 17px;
+    line-height: 1.8;
+    text-align: center;
+    justify-content: center;
+    margin-top: 12px;
+  }
+  .intro .int-container p.text-ensp{
+    display: flex;
+    font-size: 16px;
+    line-height: 1.8;
+    text-align: center;
+    justify-content: center;
+    margin-top: 12px;
+  }
+  .int_chach {font-size: 20px; margin-top:12px;font-weight: bold;}
+}
+
 .productimage {text-align: center;padding: 40px 20px;}
 .pi-image {display: flex;justify-content: center;align-items: center;}
 .pi-image img {height: auto;width: 840px; margin-top: 90px; padding-bottom: 120px;}
@@ -369,7 +369,6 @@ h2 {
   justify-content: center;
   gap: 8px;
 }
-
 .dots span {
   width: 10px;
   height: 10px;
@@ -377,7 +376,6 @@ h2 {
   border-radius: 50%;
   transition: 0.3s;
 }
-
 .dots span.active {
   background: #333;
 }
@@ -393,19 +391,16 @@ h2 {
     width: 100%;
     padding: 0 20px; 
   }
-
   .slide img {
     width: 100%;
     display: block; 
   }
-
   .dots {
     width: 100%;
     display: flex;
     justify-content: center;
   }
-
-  /* レイアウト調整（あなたの元コード維持） */
+  /* レイアウト調整 */
   .con-container,
   .mes-container,
   .feat-container,
@@ -413,7 +408,6 @@ h2 {
     flex-direction: column;
     gap: 20px;
   }
-
   .con-container img,
   .mes-left img,
   .feat-right img,
@@ -432,57 +426,48 @@ h2 {
   .mes-right,
   .feat-left,
   .serv-right {
-    max-width: 100%;   /* ← 文章の横幅を画面いっぱいに */
+    max-width: 100%;   
     width: 100%;
-    text-align: center; /* ← 中央寄せは維持 */
+    text-align: center;
   }
-
-  .concept p.text-pc {
-    font-size: 14px;
-  }
+  .concept p.text-pc {font-size: 14px;}
+  .concept {padding: 110px 12px 90px;}
 }
 
 /* ============================
-   タブレット（カルーセル無効・1枚固定）
+   タブレット
 ============================ */
 @media (min-width: 769px) and (max-width: 1024px) {
-
   .track {
     overflow: hidden;
     scroll-snap-type: none;
   }
-
-  .slide {
-    width: calc(100% - 40px); /* ← 1枚固定 */
-  }
-
+  .slide {width: calc(100% - 40px);}
   .dots { display: flex; }
-
   .con-container,
   .mes-container,
   .feat-container,
   .serv-container {
     flex-direction: row;
     gap: 20px;
+    justify-content:center ;
   }
-
   .con-container img,
   .mes-left img,
   .feat-right img,
   .serv-left img {
-    width: 50%;
+    width: 300px;
     max-width: 400px;
   }
-
   .mes-right,
   .feat-left,
   .serv-right {
     text-align: left;
   }
-
   .concept p.text-pc {
     font-size: 16px;
   }
+  .concept {padding: 110px 20px 90px;}
 }
 
 /* ============================
@@ -510,10 +495,6 @@ h2 {
     display: none;
   }
 }
-
-
-
-
 .flow {
   text-align: center;
   padding: 110px 60px 90px;
@@ -540,11 +521,10 @@ h2 {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  border: 2px solid #020202;
+  border: 1px solid #020202;
   background-color: #fff;
   color: #0b0b0b;
   font-size: 18px;
-  font-weight: bold;
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -602,6 +582,7 @@ h2 {
 
 /* スマホ */
 @media (max-width: 768px) {
+  .flow {padding: 110px 50px 90px;}
   .step-container {
     flex-direction: column; /* 縦並び */
     align-items: center;    /* 中央寄せ */
@@ -634,10 +615,14 @@ h2 {
     margin: 0 auto;
     font-size: 15px;         /* テキストを中央に */
   }
+  .step-text .text-pc {
+    font-size: 15px;
+  }
 }
 
 /* タブレット */
 @media (min-width: 769px) and (max-width: 1024px) {
+  .flow {padding: 110px 50px 90px;}
   .step-container {
     flex-direction: column;
     align-items: center;    /* 中央寄せ */
@@ -662,11 +647,13 @@ h2 {
     max-width: 400px;
     margin: 0 auto;
   }
-
   .step-text {
     align-items: center;
     text-align: center;
     margin: 0 auto;
+  }
+  .step-text .text-pc {
+    font-size: 18px;
   }
 }
 
@@ -760,6 +747,8 @@ h2 {
   .faq-contents {grid-template-columns: 1fr;gap: 20px;}
   .faq {text-align: center;padding: 40px 20px;}
   .faq-answer{font-size: 15px; margin-top: 20px;}
+  .faq-header {font-size:17px;}
+  
 }
 @media (min-width: 769px) and (max-width: 1024px) {
   .faq-contents {grid-template-columns: 1fr;gap: 24px;}
@@ -771,7 +760,7 @@ h2 {
 .info-container {text-align: center;width: 80%;margin: 0 auto; margin-bottom: 80px;}
 .info-container iframe {width: 100%;height: 500px;border-radius: 6px;border: none;}
 @media (max-width: 768px) {
-  .info-container iframe {height: 300px;}
+  .info-container iframe {height: 350px;}
 }
 @media (min-width: 769px) and (max-width: 1024px) {
   .info-container iframe {height: 400px;}
@@ -780,8 +769,7 @@ h2 {
 /* お問い合わせフォーム */
 .contact {padding: 40px 20px;background: #f7f7f7;}
 .contact-head {text-align: center;margin-bottom: 20px;}
-.contact-head h2 {font-size: 35px;margin-bottom: 8px;}
-.contact-head p {font-size: 20px;color: #666;}
+.contact-title {font-size: 30px;margin-bottom: 8px;}
 .contact-form {
   width: 80%;
   margin: 0 auto;
@@ -824,16 +812,20 @@ h2 {
 }
 .contact-form button:hover {background-color: #555;}
 @media (max-width: 768px) {
-  .contact-form {max-width: 100%;padding: 16px;}
+  .contact-form {width: 86%; max-width: 100%;padding: 16px;}
   .contact-form textarea {height: 120px;}
   .contact-form button {width: 100%;font-size: 14px;}
-  .contact-form label {font-size: 20px;}
+  .contact-form label {font-size: 15px;}
+  .contact-title {font-size: 25px;}
+  .contact-head p{font-size: 15px;}
 }
 @media (min-width: 769px) and (max-width: 1024px) {
   .contact-form {max-width: 90%;padding: 20px;}
   .contact-form textarea {height: 140px;}
   .contact-form button {font-size: 15px;padding: 10px 24px;}
   .contact-form label {font-size: 20px;}
+  .contact-title {font-size: 30px;}
+  .contact-head p{font-size: 18px;}
 }
 .image-strip {
   display: flex;

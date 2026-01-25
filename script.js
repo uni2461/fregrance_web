@@ -7,7 +7,7 @@ function setLang(lang) {
     btnEng.classList.remove("selected");
 
     setTimeout(() => {
-      window.location.href = "Parfum de reve.html";
+      window.location.href = "Parfum_de_reve.html";
     }, 100);
 
   } else {
@@ -15,7 +15,7 @@ function setLang(lang) {
     btnJpn.classList.remove("selected");
 
     setTimeout(() => {
-      window.location.href = "Parfum de reve_en.html";
+      window.location.href = "Parfum_de_reve_en.html";
     }, 100);
   }
 }
