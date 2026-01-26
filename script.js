@@ -7,7 +7,7 @@ function setLang(lang) {
     btnEng.classList.remove("selected");
 
     setTimeout(() => {
-      window.location.href = "Parfum_de_reve.html";
+      window.location.href = "/index.html";
     }, 100);
 
   } else {
@@ -15,7 +15,7 @@ function setLang(lang) {
     btnJpn.classList.remove("selected");
 
     setTimeout(() => {
-      window.location.href = "Parfum_de_reve_en.html";
+      window.location.href = "en/index.html";
     }, 100);
   }
 }
@@ -196,7 +196,7 @@ if (strip) {
   strip.innerHTML = "";
   for (let i = 0; i < count; i++) {
     const img = document.createElement('img');
-    img.src = "pic/Parfum de reve/test1.jpg";
+    img.src = "/m-parfum.jp/pic/Parfum de reve/test1.jpg";
     img.style.height = "200px";
     img.style.width = imgWidth + "px";
     img.style.objectFit = "cover";
