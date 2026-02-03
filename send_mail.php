@@ -47,10 +47,10 @@ try {
     $mail->CharSet = 'UTF-8';
 
     // 送信元・送信先設定
-    $mail->setFrom('no-reply@m-parfum.jp', 'm-parfum お問い合わせ');
-    $mail->addAddress('karura810a24@gmail.com');
+    $mail->setFrom('no-reply@m-parfum.jp', 'm-parfumお問い合わせ');
+    $mail->addAddress('info@m-parfum.jp');
 
-    // 返信先（ユーザーのメールアドレス・名前）
+    // // 返信先（ユーザーのメールアドレス・名前）
     $mail->addReplyTo($email, $name);
 
     // 件名・本文
