@@ -272,7 +272,7 @@ h2 {
   margin-top: 40px;
 }
 .mes-left img {
-  width: 300px;
+  width: 425px;
   height: auto;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -306,7 +306,7 @@ h2 {
   color: #444;
 }
 .feat-right img {
-  width: 300px;
+  width: 425px;
   height: auto;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -317,13 +317,28 @@ h2 {
   justify-content: center;
   gap: 40px;
 }
+
+.serv-left {
+  width: 300px;
+  height: 280px; /* トリミング後の見た目の高さ */
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+}
+
 .serv-left img {
+  position: absolute;
+  top: -20px; /* 上を20px隠す */
+  left: 0;
   width: 300px;
   height: auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
-.serv-right {max-width: 700px;text-align: left;}
+
+
+.serv-right {
+  max-width: 700px;
+  text-align: left;
+}
 .serv-right h5 {font-size: 20px;margin-bottom: 15px;color: #333;}
 .serv-right p {line-height: 1.8;margin-bottom: 10px;color: #444;}
 .concept p.text-pc { padding-left:15px;font-size: 20px;}
@@ -410,12 +425,18 @@ h2 {
   }
   .con-container img,
   .mes-left img,
-  .feat-right img,
-  .serv-left img {
+  .feat-right img {
     width: 100%;
-    max-width: 400px;
+    max-width: 300px;
     margin: 0 auto;
   }
+  .serv-left img {
+  position: absolute;
+  top: -20px; /* 上を20px隠す */
+  left: 0;
+  width: 300px;
+  height: auto;
+}
   .feat-left {
     order: 2;
   }
@@ -546,7 +567,9 @@ h2 {
   gap: 30px;
 }
 .step img {
-  width: 240px;
+  width: 400px;
+  height: 280px;
+  object-fit: cover;
   border-radius: 15px;
   flex-shrink: 0;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -579,14 +602,14 @@ h2 {
   color: #444;
   margin: 0;
 }
-#step4.active { margin-top: 52px;  }
+
 
 /* スマホ */
 @media (max-width: 768px) {
   .flow {padding: 110px 50px 90px;}
   .step-container {
-    flex-direction: column; /* 縦並び */
-    align-items: center;    /* 中央寄せ */
+    flex-direction: column; 
+    align-items: center;    
     justify-content: center;
     gap: 20px;
     margin-top: 20px;
@@ -606,9 +629,10 @@ h2 {
   }
 
   .step img {
-    width: 80%;
-    max-width: 500px;
-    margin: 0 auto;         /* 画像を中央に */
+    width: 260px;
+    height:182px;
+    object-fit:cover;
+    margin: 0 auto;        
   }
   .step-text {
     align-items: center;
@@ -644,8 +668,9 @@ h2 {
     margin: 0 auto;
   }
   .step img {
-    width: 80%;
-    max-width: 400px;
+    width: 400px;
+    height:280px;
+    object-fit: cover;
     margin: 0 auto;
   }
   .step-text {
@@ -678,7 +703,7 @@ h2 {
   gap: 30px;           /* 画像とテキストの間隔 */
  }
   .step img {
-    width: 240px;
+    width: 400px;
     max-width: none;
   }
 
