@@ -318,20 +318,11 @@ h2 {
   gap: 40px;
 }
 
-.serv-left {
-  width: 300px;
-  height: 280px; /* トリミング後の見た目の高さ */
-  border-radius: 12px;
-  overflow: hidden;
-  position: relative;
-}
-
 .serv-left img {
-  position: absolute;
-  top: -20px; /* 上を20px隠す */
-  left: 0;
-  width: 300px;
+  width: 425px;
   height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 
@@ -425,18 +416,13 @@ h2 {
   }
   .con-container img,
   .mes-left img,
-  .feat-right img {
+  .feat-right img,
+  .serv-left img  {
     width: 100%;
     max-width: 300px;
     margin: 0 auto;
   }
-  .serv-left img {
-  position: absolute;
-  top: -20px; /* 上を20px隠す */
-  left: 0;
-  width: 300px;
-  height: auto;
-}
+
   .feat-left {
     order: 2;
   }
@@ -741,21 +727,19 @@ h2 {
 }
 @media (max-width: 768px) {
   .menu-container {
-    grid-template-columns: 1fr; /* 1列にする */
-    justify-items: center;      /* 中央寄せ */
+    grid-template-columns: 1fr; 
+    justify-items: center;      
   }
   .menu-card {
-    width: 100%;                 /* 横幅を80%に制限 */
+    width: 100%;                
   }
 }
 @media (min-width: 769px) and (max-width: 1024px) {
   .menu-container {
-    grid-template-columns: 1fr; /* タブレットも縦並びに */
-      justify-items: center;      /* 中央寄せ */
+    grid-template-columns: 1fr; 
+      justify-items: center;    
   }
-  .menu-card {
-    width: 60%;                 /* 横幅を80%に制限 */
-  }
+  .menu-card {width: 60%;  }
 }
 
 
@@ -793,8 +777,65 @@ h2 {
 }
 
 /* お問い合わせフォーム */
-.contact {padding: 40px 20px;background: #f7f7f7;}
-.contact-head {text-align: center;margin-bottom: 20px;}
+.contact {
+  padding: 60px 20px;
+  text-align: center;
+  /* background: #f7f7f7; */
+}
+
+.insta-contact {
+  display: flex;
+  justify-content: center;
+}
+
+.insta-contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 30px;
+  border-radius: 999px;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.insta-contact-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.1);
+  background: #fdf8ff;
+}
+
+.insta-icon {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+}
+
+.insta-text-main {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  white-space: nowrap;
+}
+
+.insta-text-sub {
+  font-size: 12px;
+  color: #888;
+  white-space: nowrap;
+}
+
+/* スマホで折り返したい場合 */
+@media (max-width: 480px) {
+  .insta-contact-link {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 4px;
+  }
+}
+/* .contact-head {text-align: center;margin-bottom: 20px;}
 .contact-title {font-size: 30px;margin-bottom: 8px;}
 .contact-form {
   width: 80%;
@@ -852,7 +893,7 @@ h2 {
   .contact-form label {font-size: 20px;}
   .contact-title {font-size: 30px;}
   .contact-head p{font-size: 18px;}
-}
+} */
 .image-strip {
   display: flex;
   justify-content: center;
